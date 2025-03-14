@@ -51,6 +51,9 @@ __global__ void maj_pos(float4 * positionsGPU, float3 * velocitiesGPU, float3 * 
         positionsGPU[i].x += velocitiesGPU[i].x * 0.1f;
         positionsGPU[i].y += velocitiesGPU[i].y * 0.1f;
         positionsGPU[i].z += velocitiesGPU[i].z * 0.1f;
+        accelerationsGPU[i].x = 0.0f;
+        accelerationsGPU[i].y = 0.0f;
+        accelerationsGPU[i].z = 0.0f;
 
 }
 
